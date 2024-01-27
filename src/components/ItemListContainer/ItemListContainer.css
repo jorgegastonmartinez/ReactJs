@@ -1,0 +1,17 @@
+.Container-list {
+
+    h1 {
+        font-family: "Yantramanav", sans-serif;
+        font-size: 2rem;
+        line-height: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: rgb(37, 58, 47);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+};

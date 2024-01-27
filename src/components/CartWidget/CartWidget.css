@@ -1,0 +1,7 @@
+.CartIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(37, 58, 47);
+    font-size: 1.3rem;
+}

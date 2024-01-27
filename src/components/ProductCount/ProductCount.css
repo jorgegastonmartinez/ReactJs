@@ -1,0 +1,43 @@
+.container-btn-quantity {
+    color: rgb(22, 38, 26);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    font-family: "Yantramanav", sans-serif;
+}
+
+.btn-quantity {
+    background-color: transparent;
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    color: rgb(22, 38, 26);
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-quantity {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.stock-quantity {
+    display: flex;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.container-btn-add {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    
+    .btn-add {
+        font-family: "Yantramanav", sans-serif;
+        background-color: rgb(22, 38, 26);
+    }
+}

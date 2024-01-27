@@ -1,0 +1,7 @@
+.container-card-detail {
+    font-family: "Yantramanav", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2rem;
+}
