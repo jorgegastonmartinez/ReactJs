@@ -23,3 +23,7 @@ Contenido:
 > Uso de funciones flechas, funciones de orden superior, manejo y modificación del DOM, firebase, async, await, objetos, arrays y librerías.
 
 
+### Instalar dependencias
+'
+npm install 
+'
