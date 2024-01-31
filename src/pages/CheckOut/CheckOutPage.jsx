@@ -36,6 +36,22 @@ const CheckOutPage = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (values.email !== values.repetirEmail) {
+      toast.error("el email ingresado no coincide", {
+        position: "bottom-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      return;
+    }
+
     const docRef = await addDoc(collection(db, "storeOrders"), {
       values,
       items,
@@ -51,17 +67,18 @@ const CheckOutPage = () => {
   const notify = () => {
     if (
       Object.values(values).every((value) => value !== "") &&
-      items.length > 0
+      items.length > 0 &&
+      values.email === values.repetirEmail
     ) {
       toast.success("Su compra fue realizada con exito", {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
         transition: Bounce,
       });
     }
@@ -105,14 +122,14 @@ const CheckOutPage = () => {
           onChange={onChange}
           required
         />
-        <button className="btn-finished" onClick={notify}>
+        <button className="btn-finished" onClick={notify} disabled={items.length === 0}>
           FINALIZAR COMPRA
         </button>
         <ToastContainer />
       </form>
 
       {purchaseID ? <MessageSuccessful purchaseID={purchaseID} /> : null}
-      
+
     </div>
   );
 };
