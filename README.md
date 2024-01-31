@@ -32,9 +32,12 @@ npm install
 * Descargue el proyecto, desde GitHub, con el comando git clone
 * Instale las dependencias.
 * Corra la app con el comando npm run dev.
-* Utilice las categorías para filtrar la búsqueda deseada.
-* Seleccione el producto que desee comprar. Se puede seleccionar cantidades. Con el button "agregar al carrito”, podrás ir agregando los productos al carrito de compras.
+* Utilice las categorías para filtrar la búsqueda de los productos.
+* Seleccionar el producto que desee comprar.
+* En el detalle se puede seleccionar cantidades. Con el button "agregar al carrito”, podrás ir agregando los productos al carrito de compras.
 * Para realizar el pedido, dirigirse al carrito de compras, ubicado en la parte superior, dentro de la navbar.
-* Allí podrás agregar mas productos (volviendo a la tienda) eliminar productos, vaciar carrito, ver los precios detallados, el subtotal de cada producto, el total de la sumatoria de todos los productos agregados al carrito y finalizar la compra, 
+* Allí podrás agregar mas productos (volviendo a la tienda) eliminar productos, vaciar carrito, ver los precios detallados, el subtotal de cada producto, el total de todos los productos agregados al carrito y finalizar la compra.
 * Completar el formulario para poder realizar la compra. Cuando los datos del formulario se cargaron correctamente, se mostrará el ID de compra.
-* En el siguiente link de firebase (https://console.firebase.google.com/u/1/project/e-commerse-d742e/firestore/data/~2FstoreOrders?hl=es), se verán reflejadas las ordenes de pedidos y la tienda con todos los productos cargados.
+* En el siguiente link de firebase `https://console.firebase.google.com/u/1/project/e-commerse-d742e/firestore/data/~2FstoreOrders?hl=es` , se verán reflejadas las ordenes de pedidos y la tienda con todos los productos cargados.
+
+  
