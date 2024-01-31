@@ -54,22 +54,22 @@ const MenuCategory = () => {
         MenuListProps={{ "aria-labelledby": "basic-button" }}
       >
         <MenuItem>
-          <Link style={styles.categoryCss} to="/item-category/churreria">
+          <Link onClick={handleClose} style={styles.categoryCss} to="/item-category/churreria">
             CHURRERIA
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={styles.categoryCss} to="/item-category/bocatas">
+          <Link onClick={handleClose} style={styles.categoryCss} to="/item-category/bocatas">
             BOCATAS
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={styles.categoryCss} to="/item-category/ensaladas">
+          <Link onClick={handleClose} style={styles.categoryCss} to="/item-category/ensaladas">
             ENSALADAS
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={styles.categoryCss} to="/item-category/desayunos">
+          <Link onClick={handleClose} style={styles.categoryCss} to="/item-category/desayunos">
             DESAYUNOS
           </Link>
         </MenuItem>

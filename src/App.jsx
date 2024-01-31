@@ -14,7 +14,6 @@ import Footer from "./components/Footer/Footer";
 
 // PAGES
 import HomePage from "./pages/Home/HomePage.jsx";
-import AboutPage from "./pages/About/AboutPage.jsx";
 import ContactPage from "./pages/Contact/ContactPage.jsx";
 import ShopPage from "./pages/Shop/ShopPage.jsx";
 import ItemCategoryPage from "./pages/ItemCategory/ItemCategoryPage.jsx";
@@ -34,7 +33,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/item-detail/:id" element={<ProductDetailPage />} />

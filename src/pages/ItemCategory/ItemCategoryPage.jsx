@@ -14,7 +14,6 @@ import {
   query,
   getDocs,
   where,
-  documentId,
 } from "firebase/firestore";
 
 const ItemCategoryPage = () => {
@@ -63,10 +62,11 @@ const ItemCategoryPage = () => {
             {itemsData.map((item) => {
               return (
                 <Link
+                  key={item.id}
                   to={`/item-detail/${item.id}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <CardProduct itemsData={item} key={item.id} />
+                  <CardProduct itemsData={item}  />
                 </Link>
               );
             })}

@@ -15,14 +15,14 @@ const Navbar = () => {
       </Link>
       <ul className="ul">
         <Link className="li" to="/">
-          HOME
+          INICIO
         </Link>
         <MenuCategory />
         <Link className="li" to="/gallery">
           GALERIA
         </Link>
-        <Link className="li" to="/about">
-          ABOUT
+        <Link className="li" to="/contact">
+          CONTACTO
         </Link>
         <Link className="li" to="/shop">
           <CartWidget />

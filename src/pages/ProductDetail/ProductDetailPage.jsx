@@ -56,10 +56,11 @@ const ProductDetailPage = () => {
           {itemData.map((item) => {
             return (
               <Link
+                key={item.id}
                 to={`/item-detail/${item.id}`}
                 style={{ textDecoration: "none" }}
               >
-                <CardDetail itemData={item} key={item.id} />
+                <CardDetail itemData={item} />
               </Link>
             );
           })}
