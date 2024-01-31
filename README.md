@@ -1,11 +1,15 @@
 # Título del Proyecto
+
 Entrega Final. Curso React JS Comisión 49920.
 
 
 ## Autor
+
 Jorge Martinez.
 
+
 ## Sobre mi proyecto
+
 Este proyecto es una ecommerse de la chocolatería San Gines Argentina. 
 
 Contenido:
@@ -18,8 +22,10 @@ Contenido:
 + Al finalizar la compra nos dirigirá a una pagina donde el usuario deberá cargar correctamente todos los datos para poder concretar la compra.
 + Una vez finalizada la compra nos mostrará el ID de la orden de la compra, a través de un mensaje, solo si, el usuario cargó todos los datos correctamente, se podrá obtener el ID y el formulario se enviará a firebase.
 
+
 ## Documentación
-> Html, css, javascript y react js. Funciones flechas, funciones de orden superior, manejo y modificación del DOM, firebase, async, await, objetos, arrays y librerías.
+
+> Html, Css, Javascript, React Js, Vite, React-Router-Dom, MUI, React-toastify, Firebase. Uso de funciones flechas, funciones de orden superior, async, await, objetos, arrays.
 
 
 ### Comandos
@@ -31,6 +37,7 @@ npm run dev
 ```
 
 ## Instrucciones de uso
+
 * Descargue el proyecto, desde GitHub, con el comando git clone
 * Instale las dependencias.
 * Corra la app con el comando npm run dev.
@@ -44,6 +51,7 @@ npm run dev
 
 
 ## Imágenes del proyecto
+
 ![Captura de pantalla 2024-01-31 a la(s) 20 27 01](https://github.com/jorgegastonmartinez/ReactJs/assets/140458867/9e715a90-94c2-442e-992a-fdc58e4f4191)
 
 ![Captura de pantalla 2024-01-31 a la(s) 20 29 38](https://github.com/jorgegastonmartinez/ReactJs/assets/140458867/0a98a6a6-1872-4d15-9a0a-8a1cdbb85f1f)
@@ -57,8 +65,6 @@ npm run dev
 ![Captura de pantalla 2024-01-31 a la(s) 20 26 03](https://github.com/jorgegastonmartinez/ReactJs/assets/140458867/f0b1f653-4727-473a-bbaf-7cb0c6227687)
 
 
-
-
 ## Contacto
-Si tienes alguna pregunta o inquietud, puedes ponerte en contacto conmigo al correo `jorge_gmartinez@hotmail.com`.
 
+Si tienes alguna pregunta o inquietud, puedes ponerte en contacto conmigo al correo `jorge_gmartinez@hotmail.com`.
