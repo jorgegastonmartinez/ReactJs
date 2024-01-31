@@ -6,7 +6,7 @@ Entrega Final. Curso React JS Comisión 49920.
 Jorge Martinez.
 
 ## Sobre mi proyecto
-Este proyecto es una ecommerse de la chocolatería San Gines. 
+Este proyecto es una ecommerse de la chocolatería San Gines Argentina. 
 
 Contenido:
 
@@ -22,11 +22,13 @@ Contenido:
 > Html, css, javascript y react js. Funciones flechas, funciones de orden superior, manejo y modificación del DOM, firebase, async, await, objetos, arrays y librerías.
 
 
-### Instalar dependencias
+### Descargar el proyecto
 
-`
-npm install 
-`
+```
+git clone
+npm install
+npm run dev
+```
 
 ## Instrucciones de uso
 * Descargue el proyecto, desde GitHub, con el comando git clone
@@ -39,6 +41,11 @@ npm install
 * Allí podrás agregar mas productos (volviendo a la tienda) eliminar productos, vaciar carrito, ver los precios detallados, el subtotal de cada producto, el total de todos los productos agregados al carrito y finalizar la compra.
 * Completar el formulario para poder realizar la compra. Cuando los datos del formulario se cargaron correctamente, se mostrará el ID de compra.
 * En el siguiente link de firebase `https://console.firebase.google.com/u/1/project/e-commerse-d742e/firestore/data/~2FstoreOrders?hl=es` , se verán reflejadas las ordenes de pedidos y la tienda con todos los productos cargados.
+
+
+## Imágenes del proyecto
+
+
 
 ## Contacto
 Si tienes alguna pregunta o inquietud, puedes ponerte en contacto conmigo al correo `jorge_gmartinez@hotmail.com`.
