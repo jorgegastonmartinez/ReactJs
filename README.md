@@ -24,6 +24,7 @@ Contenido:
 
 
 ### Instalar dependencias
-'
+
+`
 npm install 
-'
+`
