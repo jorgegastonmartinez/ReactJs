@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
 //MUI
-import CircularProgress from '@mui/material/CircularProgress'
-import Box from '@mui/material/Box'
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const Spinner = () => {
   return (
-    <Box sx={{ display: "flex" }} >
-        <CircularProgress />
+    <Box sx={{ display: "flex" }}>
+      <CircularProgress />
     </Box>
-  )
-}
+  );
+};
 
 export default Spinner;

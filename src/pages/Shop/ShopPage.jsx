@@ -1,9 +1,11 @@
-import { useContext } from 'react';
 import './ShopPage.css';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+
+// CONTEXT
 import { ItemsContext } from '../../context/ItemsContext';
 
-import { Link } from 'react-router-dom';
-
+// MUI
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 const ShopPage = () => {
@@ -28,7 +30,7 @@ const ShopPage = () => {
 
       {items.map((item) => (
         <div className="container-product" key={item.id}>
-          <img className='img-product' src={item.img} alt="" />
+          <img className="img-product" src={item.img} alt="" />
           <h2 className="title-product">{item.producto}</h2>
           <p className="price-product">
             {item.cantidad} x ${item.precio}
@@ -40,34 +42,33 @@ const ShopPage = () => {
             className="btn-eliminar"
             onClick={() => handleEliminarProducto(item.id)}
           >
-           <DeleteForeverOutlinedIcon sx={{ fontSize: 30 }} />
+            <DeleteForeverOutlinedIcon sx={{ fontSize: 30 }} />
           </button>
         </div>
       ))}
       <div>
         {items.length > 0 ? (
           <div>
-            <div className='container-price'>
-            <Link style={{ textDecoration: 'none' }} to="/">
+            <div className="container-price">
+              <Link style={{ textDecoration: "none" }} to="/">
                 <button className="btn-regresar">🔙 seguir comprando</button>
               </Link>
-            <h2 className="price-total">Precio total: ${precioTotal()}</h2>
-            
+              <h2 className="price-total">Precio total: ${precioTotal()}</h2>
             </div>
-            
+
             <div className="container-btns">
               <button className="btn-vaciar" onClick={handleVaciarCarrito}>
                 Vaciar Carrito
               </button>
               <Link className="link-btn" to="/checkout">
                 <button className="btn-finalizar">Finalizar Compra</button>
-              </Link>           
+              </Link>
             </div>
           </div>
         ) : (
-          <div className='container-regresar'>
+          <div className="container-regresar">
             <p className="cart-vacio">No hay productos en el carrito</p>
-            <Link style={{ textDecoration: 'none' }} to="/">
+            <Link style={{ textDecoration: "none" }} to="/">
               <button className="btn-regresar">🔙 VER PRODUCTOS</button>
             </Link>
           </div>

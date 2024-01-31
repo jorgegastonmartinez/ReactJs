@@ -5,7 +5,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Stack from "@mui/material/Stack";
-import Alert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 
 import { useState } from "react";
 import { useContext } from "react";
@@ -34,6 +34,7 @@ const ProductCount = ({ itemData }) => {
     const estaEnElCarrito = nuevoItem.find(
       (prod) => prod.id === itemAgregado.id
     );
+    
     if (estaEnElCarrito) {
       estaEnElCarrito.cantidad = estaEnElCarrito.cantidad + cantidad;
       setItems(nuevoItem);

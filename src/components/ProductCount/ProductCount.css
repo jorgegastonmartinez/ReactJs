@@ -8,6 +8,7 @@
     justify-content: center;
     font-family: "Yantramanav", sans-serif;
 }
+
 .btn-quantity {
     background-color: transparent;
     border: 0;
@@ -20,22 +21,25 @@
     justify-content: center;
     align-items: center;
 }
+
 .text-quantity {
     text-align: center;
     font-size: 1.6rem;
 }
+
 .stock-quantity {
     display: flex;
     text-align: center;
     font-size: 1.6rem;
 }
+
 .container-btn-add {
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
     .btn-add {
         font-family: "Yantramanav", sans-serif;
         background-color: rgb(22, 38, 26);

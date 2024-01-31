@@ -1,26 +1,26 @@
-import './App.css';
+import "./App.css";
 
 // react-router-dom
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // CONTEXT
-import { ItemsProvider } from './context/ItemsContext.jsx';
+import { ItemsProvider } from "./context/ItemsContext.jsx";
 
-// COMPONENTES
-import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar.jsx';
-import ImagePrincipal from './components/ImagePrincipal/ImagePrincipal.jsx';
-import Footer from './components/Footer/Footer';
+// components
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import ImagePrincipal from "./components/ImagePrincipal/ImagePrincipal.jsx";
+import Footer from "./components/Footer/Footer";
 
 // PAGES
-import HomePage from './pages/Home/HomePage.jsx';
-import AboutPage from './pages/About/AboutPage.jsx';
-import ContactPage from './pages/Contact/ContactPage.jsx';
-import ShopPage from './pages/Shop/ShopPage.jsx';
-import ItemCategoryPage from './pages/ItemCategory/ItemCategoryPage.jsx';
-import ProductDetailPage from './pages/ProductDetail/ProductDetailPage.jsx';
-import Gallery from './pages/Gallery/Gallery.jsx';
-import CheckOutPage from './pages/CheckOut/CheckOutPage.jsx';
+import HomePage from "./pages/Home/HomePage.jsx";
+import AboutPage from "./pages/About/AboutPage.jsx";
+import ContactPage from "./pages/Contact/ContactPage.jsx";
+import ShopPage from "./pages/Shop/ShopPage.jsx";
+import ItemCategoryPage from "./pages/ItemCategory/ItemCategoryPage.jsx";
+import ProductDetailPage from "./pages/ProductDetail/ProductDetailPage.jsx";
+import Gallery from "./pages/Gallery/Gallery.jsx";
+import CheckOutPage from "./pages/CheckOut/CheckOutPage.jsx";
 
 const App = () => {
   return (
@@ -47,7 +47,6 @@ const App = () => {
 
           <Footer />
         </div>
-        
       </ItemsProvider>
     </Router>
   );

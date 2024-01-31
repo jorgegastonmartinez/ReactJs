@@ -3,12 +3,14 @@
     justify-content: center;
     margin: 40px;
 }
+
 .DetailContainer {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 25px;
 }
+
 .ItemListDetailContainer {
     display: flex;
     justify-content: center;

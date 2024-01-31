@@ -1,18 +1,19 @@
 import "./CheckOutPage.css";
-import MessageSuccessful from '../../components/MessageSuccessful/MessageSuccessful';
+import MessageSuccessful from "../../components/MessageSuccessful/MessageSuccessful";
 
-import React, { useState } from 'react'
-import { useContext } from 'react';
-import { ItemsContext } from '../../context/ItemsContext';
+import React, { useState } from "react";
+import { useContext } from "react";
+import { ItemsContext } from "../../context/ItemsContext";
 
-import { db } from '../../firebase/firebaseConfig';
+import { db } from "../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 
-import TextField from '@mui/material/TextField';
+// MUI
+import TextField from "@mui/material/TextField";
 
 // TOASTIFY
-import { ToastContainer, toast , Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initialState = {
   nombre: "",
@@ -122,14 +123,17 @@ const CheckOutPage = () => {
           onChange={onChange}
           required
         />
-        <button className="btn-finished" onClick={notify} disabled={items.length === 0}>
+        <button
+          className="btn-finished"
+          onClick={notify}
+          disabled={items.length === 0}
+        >
           FINALIZAR COMPRA
         </button>
         <ToastContainer />
       </form>
 
       {purchaseID ? <MessageSuccessful purchaseID={purchaseID} /> : null}
-
     </div>
   );
 };

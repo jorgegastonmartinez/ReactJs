@@ -1,11 +1,11 @@
-import React from 'react';
-import './ItemList.css'
+import React from "react";
+import "./ItemList.css";
 
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import CardProduct from '../CardProduct/CardProduct';
-import Spinner from '../Spinner/Spinner';
+import CardProduct from "../CardProduct/CardProduct";
+import Spinner from "../Spinner/Spinner";
 
 // FIREBASE - FIRESTORE
 import { db } from "../../firebase/firebaseConfig";
@@ -33,7 +33,7 @@ const ItemList = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-  }, []); 
+  }, []);
 
   return (
     <>
@@ -42,21 +42,22 @@ const ItemList = () => {
           <Spinner />
         </div>
       ) : (
-        <div className='Container-item'>
+        <div className="Container-item">
           {itemsData.map((item) => {
             return (
-              <Link key={item.id}
+              <Link
+                key={item.id}
                 to={`/item-detail/${item.id}`}
-                style={{ textDecoration: "none" }}>
-                  <CardProduct itemsData={item} /> 
+                style={{ textDecoration: "none" }}
+              >
+                <CardProduct itemsData={item} />
               </Link>
             );
           })}
         </div>
-  )}
-  </>
+      )}
+    </>
   );
 };
-
 
 export default ItemList;

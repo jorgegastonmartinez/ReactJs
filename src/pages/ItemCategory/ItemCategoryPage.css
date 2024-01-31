@@ -3,25 +3,27 @@
     justify-content: center;
     margin: 40px;
 }
+
 .Title-category {
 
     h1 {
-    padding: 3rem;
-    font-family: "Yantramanav", sans-serif;
-    font-size: 2rem;
-    line-height: 1.2em;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: rgb(37, 58, 47);
-    display: flex;
-    text-transform: uppercase;
+        padding: 3rem;
+        font-family: "Yantramanav", sans-serif;
+        font-size: 2rem;
+        line-height: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: rgb(37, 58, 47);
+        display: flex;
+        text-transform: uppercase;
     }
-    
+
 }
+
 .ItemsCategoryContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    justify-content: center; 
+    justify-content: center;
     padding: 3rem;
 }

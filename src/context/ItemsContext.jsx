@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from "react";
 
 export const ItemsContext = createContext();
 
@@ -9,6 +9,5 @@ export const ItemsProvider = ({ children }) => {
     <ItemsContext.Provider value={[items, setItems]}>
       {children}
     </ItemsContext.Provider>
-  )
+  );
 };
-
