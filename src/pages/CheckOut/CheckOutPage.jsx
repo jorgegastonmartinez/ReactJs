@@ -1,99 +1,119 @@
-import React, { useState } from 'react'
-
 import "./CheckOutPage.css";
-
 import MessageSuccessful from '../../components/MessageSuccessful/MessageSuccessful';
+
+import React, { useState } from 'react'
+import { useContext } from 'react';
+import { ItemsContext } from '../../context/ItemsContext';
 
 import { db } from '../../firebase/firebaseConfig';
 import { collection, addDoc } from "firebase/firestore";
 
 import TextField from '@mui/material/TextField';
 
-const styles = {
-    containerShop: {
-        textAlign: "center",
-        paddingTop: 20,
-    },
-};
-
-const initialState = {
-    name: "",
-    lastName: "",
-    city: "",
-};
-
-
-
-import { ToastContainer, toast } from 'react-toastify';
+// TOASTIFY
+import { ToastContainer, toast , Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
+const initialState = {
+  nombre: "",
+  apellido: "",
+  email: "",
+  repetirEmail: "",
+};
 
 const CheckOutPage = () => {
-
-  const notify = () => toast("Su compra se realizó con exito!!");
-
+  const [items, setItems] = useContext(ItemsContext);
 
   const [values, setValues] = useState(initialState);
 
-  const [purchaseID, setPurchaseId] = useState(null); 
+  const [purchaseID, setPurchaseId] = useState(null);
 
   const onChange = (e) => {
-      const { value, name } = e.target; 
+    const { value, name } = e.target;
 
-      setValues({ ...values, [name]: value });
+    setValues({ ...values, [name]: value });
   };
 
   const onSubmit = async (e) => {
-      e.preventDefault();
-      const docRef = await addDoc(collection(db, "purchaseCollection"), {
-          values,
-      });
-      setPurchaseId(docRef.id);
-      setValues(initialState); 
+    e.preventDefault();
+    const docRef = await addDoc(collection(db, "storeOrders"), {
+      values,
+      items,
+    });
+
+    setPurchaseId(docRef.id);
+
+    setValues(initialState);
+
+    setItems([]);
   };
 
-return (
-  <div style={styles.containerShop}>
-      <h1 style={{ color: "black" }} >complete los datos para finalizar el pedido</h1>
-      <form className='FormContainer' onSubmit={onSubmit}>
-          <TextField
-          placeholder='NAME'
+  const notify = () => {
+    if (
+      Object.values(values).every((value) => value !== "") &&
+      items.length > 0
+    ) {
+      toast.success("Su compra fue realizada con exito", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
+  };
+
+  return (
+    <div>
+      <h1 className="title-checkout">
+        complete los datos para finalizar el pedido
+      </h1>
+      <form className="FormContainer" onSubmit={onSubmit}>
+        <TextField
+          placeholder="Nombre"
           style={{ margin: 10, width: 400 }}
-          name='name'
-          value={values.name}
+          name="nombre"
+          value={values.nombre}
           onChange={onChange}
           required
-          />
-          <TextField
-          placeholder='LAST NAME'
+        />
+        <TextField
+          placeholder="Apellido"
           style={{ margin: 10, width: 400 }}
-          name='lastName'
-          value={values.lastName}
+          name="apellido"
+          value={values.apellido}
           onChange={onChange}
           required
-          />
-          <TextField
-          placeholder='CITY'
+        />
+        <TextField
+          placeholder="Email"
           style={{ margin: 10, width: 400 }}
-          name='city'
-          value={values.city}
+          name="email"
+          value={values.email}
           onChange={onChange}
           required
-          />
-          <button className='btnASendAction' onClick={notify}>
-              ENVIAR
-          </button>
-          <ToastContainer />
+        />
+        <TextField
+          placeholder="Repetir Email"
+          style={{ margin: 10, width: 400 }}
+          name="repetirEmail"
+          value={values.repetirEmail}
+          onChange={onChange}
+          required
+        />
+        <button className="btn-finished" onClick={notify}>
+          FINALIZAR COMPRA
+        </button>
+        <ToastContainer />
       </form>
 
-      {purchaseID ? <MessageSuccessful purchaseID={purchaseID}/> : null}
-  </div>
-
-
-
-
-)
-}
-  export default CheckOutPage;
+      {purchaseID ? <MessageSuccessful purchaseID={purchaseID} /> : null}
+      
+    </div>
+  );
+};
+export default CheckOutPage;

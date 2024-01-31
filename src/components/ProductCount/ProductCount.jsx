@@ -1,17 +1,20 @@
+import "./ProductCount.css";
+
 // MUI
 import * as React from "react";
 import Button from "@mui/material/Button";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Stack from "@mui/material/Stack";
+import Alert from '@mui/material/Alert';
 
-import "./ProductCount.css";
 import { useState } from "react";
 import { useContext } from "react";
 import { ItemsContext } from "../../context/ItemsContext";
 
-
 const ProductCount = ({ itemData }) => {
   const [items, setItems] = useContext(ItemsContext);
+
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   const [cantidad, setCantidad] = useState(1);
 
@@ -37,6 +40,14 @@ const ProductCount = ({ itemData }) => {
     } else {
       setItems([...items, itemAgregado]);
     }
+
+    setCantidad(1);
+
+    setShowSuccessAlert(true);
+
+    setTimeout(() => {
+      setShowSuccessAlert(false);
+    }, 5000);
   };
 
   return (
@@ -61,6 +72,12 @@ const ProductCount = ({ itemData }) => {
             AGREGAR AL CARRITO
           </Button>
         </Stack>
+
+        {showSuccessAlert && (
+          <Stack sx={{ width: "100%" }} spacing={2}>
+            <Alert severity="success">Producto agregado exitosamente</Alert>
+          </Stack>
+        )}
       </div>
     </div>
   );

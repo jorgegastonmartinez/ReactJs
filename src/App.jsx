@@ -38,16 +38,16 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/item-detail/:id" element={<ProductDetailPage />} />
-           
             <Route
               path="/item-category/:categoria"
               element={<ItemCategoryPage />}
             />
-             /* <Route path="/checkout" element={<CheckOutPage />} />
+            <Route path="/checkout" element={<CheckOutPage />} />
           </Routes>
 
           <Footer />
         </div>
+        
       </ItemsProvider>
     </Router>
   );

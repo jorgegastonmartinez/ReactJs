@@ -1,6 +1,110 @@
 .container-carrito {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+    justify-content: center;
+    font-family: "Yantramanav", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.tienda-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(37, 58, 47);
+    padding-bottom: 2rem;
+}
+.title-product {
+    text-transform: capitalize;
+}
+.img-product {
+    display: flex;
+    flex-direction: column;
+    max-width: 5rem;
+}
+.price-total {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-vaciar {
+    display: flex;
+    background-color: rgb(37, 58, 47);
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+.btn-vaciar:hover {
+    background-color: white;
+    color: rgb(37, 58, 47);
+    }
+.btn-finalizar {
+    display: flex;
+    background-color: rgb(37, 58, 47);
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+.btn-finalizar:hover {
+    background-color: white;
+    color: rgb(37, 58, 47);
+}
+.link-btn {
+    text-decoration: none;
+}
+.btn-eliminar {
+    border: none;
+    background-color: transparent;
+}
+.container-btns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+.container-regresar {
+    display: flex;
     gap: 2rem;
-    
+    flex-direction: column;
+    padding: 2rem;
+}
+.cart-vacio {
+    font-family: "Yantramanav", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.btn-regresar {
+    display: flex;
+    gap: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Yantramanav", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.btn-regresar:hover {
+    color: rgb(37, 58, 47);
+}
+.container-price {
+    display: flex;
+    justify-content: space-between;
 }

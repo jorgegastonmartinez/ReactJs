@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './ShopPage.css';
 import { ItemsContext } from '../../context/ItemsContext';
 
 import { Link } from 'react-router-dom';
+
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 const ShopPage = () => {
   const [items, setItems] = useContext(ItemsContext);
@@ -11,38 +13,62 @@ const ShopPage = () => {
     return items.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   };
 
+  const handleEliminarProducto = (productId) => {
+    const updatedItems = items.filter((item) => item.id !== productId);
+    setItems(updatedItems);
+  };
+
   const handleVaciarCarrito = () => {
     setItems([]);
   };
 
   return (
     <div className="container-carrito">
-      <h1>TIENDA</h1>
+      <h1 className="tienda-title">TIENDA</h1>
 
       {items.map((item) => (
-        <div key={item.id}>
-          <h2>{item.producto}</h2>
-          <p>
+        <div className="container-product" key={item.id}>
+          <img className='img-product' src={item.img} alt="" />
+          <h2 className="title-product">{item.producto}</h2>
+          <p className="price-product">
             {item.cantidad} x ${item.precio}
           </p>
-          <p>Subtotal: ${item.precio * item.cantidad}</p>
+          <p className="subtotal-product">
+            Subtotal: ${item.precio * item.cantidad}
+          </p>
+          <button
+            className="btn-eliminar"
+            onClick={() => handleEliminarProducto(item.id)}
+          >
+           <DeleteForeverOutlinedIcon sx={{ fontSize: 30 }} />
+          </button>
         </div>
       ))}
       <div>
         {items.length > 0 ? (
           <div>
-            <h2>Precio total: ${precioTotal()}</h2>
-            <button onClick={handleVaciarCarrito}>Vaciar Carrito</button>
-            <Link to="/checkout">
-              <button>Finalizar Compra</button>
-            </Link>
+            <div className='container-price'>
+            <Link style={{ textDecoration: 'none' }} to="/">
+                <button className="btn-regresar">🔙 seguir comprando</button>
+              </Link>
+            <h2 className="price-total">Precio total: ${precioTotal()}</h2>
             
+            </div>
+            
+            <div className="container-btns">
+              <button className="btn-vaciar" onClick={handleVaciarCarrito}>
+                Vaciar Carrito
+              </button>
+              <Link className="link-btn" to="/checkout">
+                <button className="btn-finalizar">Finalizar Compra</button>
+              </Link>           
+            </div>
           </div>
         ) : (
-          <div>
-            <p>No hay productos en el carrito</p>
-            <Link to="/">
-              <button>Ir a la Tienda</button>
+          <div className='container-regresar'>
+            <p className="cart-vacio">No hay productos en el carrito</p>
+            <Link style={{ textDecoration: 'none' }} to="/">
+              <button className="btn-regresar">🔙 VER PRODUCTOS</button>
             </Link>
           </div>
         )}

@@ -45,10 +45,10 @@ const ItemList = () => {
         <div className='Container-item'>
           {itemsData.map((item) => {
             return (
-              <Link
+              <Link key={item.id}
                 to={`/item-detail/${item.id}`}
                 style={{ textDecoration: "none" }}>
-                  <CardProduct itemsData={item} key={item.id} /> 
+                  <CardProduct itemsData={item} /> 
               </Link>
             );
           })}

@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 const CardProduct = ( {itemsData} ) => {
   return (
     <Card sx={{ fontFamily: "Yantramanav, sans-serif" }}>
-      <CardMedia sx={{ fontFamily: "Yantramanav, sans-serif",  }}
+      <CardMedia sx={{ fontFamily: "Yantramanav, sans-serif" }}
         component="img"
         alt={itemsData.producto}
         image={itemsData.img}
